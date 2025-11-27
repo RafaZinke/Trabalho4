@@ -462,7 +462,7 @@ def menu_principal():
         print("\n" + "=" * 70)
         print(f"  {config.get_info()}")
         print("=" * 70)
-        print("\n📦 MENU PRINCIPAL")
+        print("\n MENU PRINCIPAL")
         print("1. Cotar Entrega")
         print("2. Ver Logs do Sistema")
         print("3. Sair")
@@ -477,16 +477,16 @@ def menu_principal():
         elif opcao == "2":
             mostrar_logs(log)
         elif opcao == "3":
-            print("\n👋 Encerrando sistema. Até logo!")
+            print("\n Encerrando sistema. Até logo!")
             break
         else:
-            print("\n❌ Opção inválida!")
+            print("\n Opção inválida!")
 
 
 def cotar_entrega_interativa(servico: ServicoFrete):
     """Fluxo interativo de cotação"""
     print("\n" + "=" * 70)
-    print("📦 NOVA COTAÇÃO DE ENTREGA")
+    print(" NOVA COTAÇÃO DE ENTREGA")
     print("=" * 70)
 
     # Dados do pacote
@@ -501,13 +501,13 @@ def cotar_entrega_interativa(servico: ServicoFrete):
         peso = float(input("Peso (kg): ").strip() or "5.0")
         volume = float(input("Volume (m³): ").strip() or "0.1")
     except ValueError:
-        print("❌ Valores inválidos! Usando padrões.")
+        print(" Valores inválidos! Usando padrões.")
         peso, volume = 5.0, 0.1
 
     pacote = Pacote(peso, volume, origem, destino, zona)
 
     # Estratégia de frete
-    print("\n💰 Escolha a Estratégia de Cálculo:")
+    print("\n Escolha a Estratégia de Cálculo:")
     print("1. Por Zona")
     print("2. Por Peso")
     print("3. Por Volume")
@@ -515,7 +515,7 @@ def cotar_entrega_interativa(servico: ServicoFrete):
     estrategia = input("Opção: ").strip() or "1"
 
     # SLA (Factory)
-    print("\n🚚 Escolha o SLA (Prazo):")
+    print("\n Escolha o SLA (Prazo):")
     print("1. Econômico (10 dias)")
     print("2. Padrão (5 dias)")
     print("3. Expresso (2 dias)")
@@ -528,17 +528,17 @@ def cotar_entrega_interativa(servico: ServicoFrete):
     servicos = [s.strip() for s in servicos_str.split(",") if s.strip()]
 
     # Processar cotação
-    print("\n⏳ Processando cotação...")
+    print("\n Processando cotação...")
     entrega = servico.cotar_entrega(pacote, estrategia, sla, servicos)
     print(entrega)
 
-    input("\n✅ Pressione ENTER para continuar...")
+    input("\n Pressione ENTER para continuar...")
 
 
 def mostrar_logs(log: LogSistema):
     """Exibe logs do sistema"""
     print("\n" + "=" * 70)
-    print("📋 LOGS DO SISTEMA")
+    print(" LOGS DO SISTEMA")
     print("=" * 70)
     logs = log.get_logs()
     if logs:
@@ -546,7 +546,7 @@ def mostrar_logs(log: LogSistema):
             print(entry)
     else:
         print("Nenhum log registrado ainda.")
-    input("\n✅ Pressione ENTER para continuar...")
+    input("\n Pressione ENTER para continuar...")
 
 
 # ============================================================================
