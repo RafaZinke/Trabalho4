@@ -1,124 +1,82 @@
-# Sistema de Cotação de Fretes
+Sistema de Cotação de Fretes
 
-# Desenvolvido por: Rafael Zink
+Desenvolvido por: Rafael Zink
 
-# &nbsp;GitHub: https://github.com/RafaZinke/Trabalho4
+ GitHub: https://github.com/RafaZinke/Trabalho4
 
-# 
 
-# Objetivo
 
-# Sistema de cotação de fretes que demonstra a aplicação prática de Design Patterns orientados a objetos no domínio de logística.
+Objetivo
 
-# Padrões Implementados
+Sistema de cotação de fretes que demonstra a aplicação prática de Design Patterns orientados a objetos no domínio de logística.
 
-# Padrão
+Padrões Implementados:
 
-# Aplicação
+* Padrão
+* Aplicação
+* Benefício
+* Strategy
+* Cálculo de frete (zona/peso/volume/expresso)
+* Trocar algoritmo dinamicamente
+* Decorator
+* Serviços adicionais (pedágios/seguro/embalagem)
+* Compor funcionalidades
+* Factory Method
+* Criação de transportadoras por SLA
+* Criar objetos de forma modular
+* Singleton
 
-# Benefício
+Configuração e Log centralizados
 
-# Strategy
+Instância única no sistema
 
-# Cálculo de frete (zona/peso/volume/expresso)
 
-# Trocar algoritmo dinamicamente
 
-# Decorator
+Problema Resolvido
 
-# Serviços adicionais (pedágios/seguro/embalagem)
+Empresas de logística precisam:
 
-# Compor funcionalidades
+Calcular fretes com diferentes critérios (zona, peso, volume)
 
-# Factory Method
+Adicionar serviços opcionais de forma flexível
 
-# Criação de transportadoras por SLA
+Escolher transportadoras com diferentes prazos e preços
 
-# Criar objetos de forma modular
+Manter configurações e logs centralizados
 
-# Singleton
 
-# Configuração e Log centralizados
 
-# Instância única no sistema
+ Como Executar
 
-# 
+Pré-requisitos
 
-# Problema Resolvido
+python --version  # Requer Python 3.8+
 
-# Empresas de logística precisam:
+Executar Sistema
 
-# Calcular fretes com diferentes critérios (zona, peso, volume)
+python main.py
 
-# Adicionar serviços opcionais de forma flexível
 
-# Escolher transportadoras com diferentes prazos e preços
 
-# Manter configurações e logs centralizados
+O menu permite:
 
-# 
+Cotar Entrega - Simular uma cotação completa
 
-# &nbsp;Como Executar
+Ver Logs - Histórico de operações
 
-# Pré-requisitos
+Sair
 
-# python --version  # Requer Python 3.8+
 
-# Executar Sistema
 
-# python main.py
+ Como Testar
 
-# O menu permite:
+Executar Testes
 
-# Cotar Entrega - Simular uma cotação completa
+python test\_main.py
 
-# Ver Logs - Histórico de operações
+ 
 
-# Sair
+Linguagem: Python 3.8+ |
 
-# Exemplo de Uso
 
-# &nbsp;MENU PRINCIPAL
-
-# 1\. Cotar Entrega
-
-# &nbsp;Escolha: 1
-
-# 
-
-# Origem: São Paulo
-
-# Destino: Rio de Janeiro
-
-# Zona: regional
-
-# Peso: 10 kg
-
-# Volume: 0.5 m³
-
-# 
-
-# Estratégia: 1 (Por Zona)
-
-# SLA: 2 (Padrão - 5 dias)
-
-# Serviços: pedagio,seguro
-
-# 
-
-# Resultado: R$ 106.34 | ExpressLog Padrão | 5 dias
-
-# 
-
-# &nbsp;Como Testar
-
-# Executar Testes
-
-# python test\_main.py
-
-# &nbsp;
-
-# Linguagem: Python 3.8+ |
-
-# 
 
